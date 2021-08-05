@@ -1,0 +1,693 @@
+/*google Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*if you want to cange the values of your skills go to line 339*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  width: calc(100% - 300px);
+  margin-left: auto;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 1320px) {
+  /*Responsive body*/
+  body {
+    width: 100%;
+  }
+}
+
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  z-index: 99999;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.headerImage {
+  border: #00d1ff solid 5px;
+  width:128px;
+  height:156px;
+}
+.SoialMedia i{
+  color: #000;
+}
+/*header Icon Soial media*/
+.btn {
+  width: 30px;
+  height: 30px;
+}
+.btn:hover {
+  background-color: #00d1ff;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+@media (max-width: 1320px) {
+  /*Responsive Header*/
+  .header {
+    position: fixed;
+    left: -100%;
+  }
+  .header.open {
+    left: 0;
+  }
+}
+
+/*about Me Information*/
+.about-me {
+  margin-top: 60px;
+}
+.about-me .triangle {
+  position: absolute;
+  left: 43px;
+  border-left: 15px solid #fff;
+  border-right: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.about-me .line {
+  height: 60px;
+  width: 2px;
+  background: #fff;
+  position: absolute;
+  left: 43px;
+}
+.about-me .line2 {
+  top: 382px;
+}
+.about-me .line3 {
+  top: 453px;
+}
+.about-me .line4 {
+  top: 523px;
+}
+.about-me .line5 {
+  top: 595px;
+}
+.about-me .line1::after,
+.about-me .line2::after,
+.about-me .line3::after,
+.about-me .line4::after,
+.about-me .line5::after {
+  content: " ";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: -7px;
+  top: 58px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  z-index: 9999;
+}
+
+.about-me .About-title {
+  left: 75px;
+  font-size: 20px;
+}
+.about-me .YourJob {
+  font-size: 17px;
+  left: 72px;
+  top: 362px;
+}
+.about-me .Birthday {
+  font-size: 15px;
+  top: 436px;
+  left: 72px;
+}
+.about-me .Phone {
+  font-size: 15px;
+  top: 507px;
+  left: 72px;
+}
+.about-me .Email {
+  font-size: 15px;
+  top: 579px;
+  left: 72px;
+}
+.about-me .Freelance {
+  font-size: 15px;
+  top: 650px;
+  left: 72px;
+}
+/*mobile toggle button animation*/
+.mobileNavigation {
+  position: fixed;
+  right: -100%;
+  top: 10px;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+  z-index: 9999;
+}
+.mobileNavigation span {
+  display: inline-block;
+  width: 28px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #272829;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.mobileNavigation span::before,
+.mobileNavigation span::after {
+  content: " ";
+  position: absolute;
+  width: 28px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #272829;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.mobileNavigation span::before {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+.mobileNavigation span::after {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+.mobileNavigation.open span {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  background: transparent;
+}
+.mobileNavigation.open span::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+.mobileNavigation.open span::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
+}
+/*navigations styles*/
+.navigations {
+  top: 0;
+  left: -100%;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  width: 300px;
+  height: 100%;
+  z-index: 9999;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.navigations.open {
+  left: 0;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+.toggleNav {
+  top: 730px;
+  left: 23px;
+  width: 250px;
+  height: 50px;
+  z-index: 9999;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+
+@media (max-width: 1320px) {
+  /*Responsive toggle for showing navigations*/
+  .mobileNavigation {
+    right: 10px;
+  }
+}
+/*Home Section*/
+.hero {
+  background-image: url(../../images/cover.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero .conetntHome {
+  width: 300px;
+}
+.hero h1 {
+  font-size: 50px;
+}
+.hero p {
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00d1ff;
+  font-size: 30px;
+  -webkit-animation: text 6s infinite;
+          animation: text 6s infinite;
+}
+/*section 3 Resume*/
+.Asummary,
+.Aeducation {
+  position: relative;
+  margin: 30px 0;
+}
+.Summary,
+.Education {
+  border: 3px solid #511f54;
+  padding: 40px;
+  margin-top: 20px;
+  height: 430px;
+  overflow: hidden;
+}
+.Summary:hover{
+  overflow-y: auto;
+}
+.Education:hover {
+  overflow-y: auto;
+}
+
+.someContact span {
+  width: 16px;
+  height: 16px;
+  background-color: #00d1ff;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.Education span {
+  display: inline-block;
+  background-color: #00d1ff;
+  color: #272829;
+  padding: 5px;
+  font-size: 13px;
+  margin: 7px 0;
+}
+.Summary p,
+.Education p {
+  line-height: 2;
+}
+
+/*Skills */
+
+.Skills .lineunder::after {
+  content: " ";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: #00d1ff;
+  left: 0;
+  bottom: -6px;
+}
+.progress-title {
+  width: 100%;
+  height: auto;
+}
+.progress-title h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px;
+}
+.progress {
+  height: 20px;
+  background-color: #171b3c;
+  border-radius: 20px;
+  border: 1px solid #000;
+  margin-bottom: 40px;
+  overflow: visible;
+  position: relative;
+}
+.progress-value{
+  color: #171b3c;
+  font-weight: 900;
+}
+.progress-bar.html,
+.progress-bar.css,
+.progress-bar.js,
+.progress-bar.php{
+  background-color: #00d1ff;
+}
+.progress-bar.html{/*if you change this skill, change (html without (.) with your skill*/
+  width: 100%;     /*replace (100%) with your value according with value in index.html*/
+}
+.progress-bar.css{/*if you change this skill, change (css without (.) with your skill*/    
+  width: 85%;     /*replace (85%) with your value according with value in index.html*/
+}
+.progress-bar.js{/*if you change this skill, change (html without (.) with your skill*/
+  width: 70%;    /*replace (70%) with your value according with value in index.html*/
+}
+.progress-bar.php{/*if you change this skill, change (html without (.) with your skill*/
+  width: 60%;     /*replace (60%) with your value according with value in index.html*/
+}
+
+.progress .progress-bar {
+  border-radius: 20px;
+}
+
+/*PortFolio Section*/
+
+/*Taps Pills*/
+.Portfolio__Project {
+  position: relative;
+  cursor: pointer;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  padding: 0;
+}
+.Portfolio__Project .Portfolio__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.253);
+  padding: 20px;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: ease-in-out all 0.5s;
+  transition: ease-in-out all 0.5s;
+}
+.Portfolio__Project:hover .Portfolio__content {
+  -webkit-transition: ease-in-out all 0.5s;
+  transition: ease-in-out all 0.5s;
+  opacity: 1;
+}
+.Portfolio__Project img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+.Portfolio__Project:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+.Portfolio__Project .Portfolio__content h1 {
+  font-weight: 900;
+}
+
+.Portfolio__Project .Portfolio__content i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  padding: 10px;
+}
+.Portfolio__Project .Portfolio__content i:hover {
+  font-size: 40px;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*Portfolio PopUp*/
+.MainPopUp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.596);
+  top: 0;
+  left: 0;
+  -webkit-transition: all ease-out 0.4s;
+  transition: all ease-out 0.4s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  z-index: 2;
+}
+.MainPopUp.open {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.Portfolio__popUp {
+  width: 700px;
+  height: 700px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: all ease-out 0.4s 0.4s;
+  transition: all ease-out 0.4s 0.4s;
+}
+.Portfolio__popUp.open {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: all ease-out 0.4s 0.4s;
+  transition: all ease-out 0.4s 0.4s;
+}
+.Portfolio__popUp .Portfolio__image img {
+  width: 100%;
+  border-radius: 20px;
+}
+.project__information {
+  padding: 20px 40px;
+}
+.project__information h2 {
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+}
+.project__information p span {
+  display: inline-block;
+  font-weight: 600;
+  margin-right: 5px;
+}
+.project__information p a {
+  text-decoration: none;
+}
+
+@media (max-width: 1320px) {
+  /*Responsive Portfolio*/
+  .Portfolio__popUp {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+/*Service Section*/
+.card {
+  border: none;
+  margin: 50px 0 0 0;
+  height: 500px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+.card:hover {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+}
+.card-img-top {
+  width: 100%;
+  height: 100%;
+}
+.card-img-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+.overlayServices {
+  font-family: "Redressed", cursive;
+  background-color: rgba(17, 17, 17, 0.459);
+  padding: 10px;
+}
+.img-services {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10%;
+  margin-bottom: 20px;
+}
+.card-img-overlay .card-title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/*testimonial Section*/
+.TextArea {
+  width: 50%;
+  display: block;
+  text-align: center;
+}
+.TextArea h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.TextArea p {
+  font-size: 14px;
+}
+.imageArea {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.imageArea img {
+  width: 100%;
+}
+.carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -60px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+  z-index: 1;
+}
+.carousel-indicators li {
+  background-color: #00d1ff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+.carousel-indicators li:hover {
+  background-color: #272829;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.carousel-indicators .active {
+  background-color: #272829;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+@media(max-width:765px){
+  .TextArea{
+    width: 100%;
+  }
+}
+/*Contact Section*/
+.card-deck .card {
+  position: relative;
+  height: 300px;
+  box-shadow: 2px 2px 7px #100c0c7a;
+  overflow: hidden;
+  padding: 0;
+}
+.card-deck .card:hover .content {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.card-deck .card:hover .imgbx {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.card-deck .card .imgbx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+.card-deck .card .imgbx img {
+  max-width: 100px;
+}
+.card-deck .card .content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  background-color: #2ba1ff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.card-deck .card .content .icon img {
+  max-width: 100px;
+}
+.card-deck .card .content h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+.card-deck .card .content h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+/*Footer Section*/
+footer {
+  background-color: #2e2e2e;
+}
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #00d1ff;
+}
+	

@@ -1,0 +1,56 @@
+/*background Colors*/
+
+.bg-purple {
+  background-color: #511f54;
+}
+.text-purple {
+  color: #511f54;
+}
+.bg-Azure {
+  background-color: #00d1ff;
+}
+.text-Azure {
+  color: #00d1ff;
+}
+.bg-Azure-50 {
+  background-color: #00d0ff85;
+}
+
+.section {
+  padding: 50px 0;
+<<<<<<< HEAD:CSS/globales.css
+  overflow:hidden;
+=======
+  overflow: hidden;
+>>>>>>> 322e97e (finalProject):KAMO V-1.0.0/Theme/assets/css/custom/globales.css
+}
+
+.LineUnder {
+  position: relative;
+  font-size: 50px;
+  color: transparent;
+  -webkit-text-stroke: 1px #511f54;
+}
+.LineUnder::after {
+  content: " ";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: #00d1ff;
+  left: 0;
+  bottom: -6px;
+}
+.LineUnder::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  color: #00d1ff;
+  -webkit-animation: MainTitle 4s ease-in-out infinite;
+          animation: MainTitle 4s ease-in-out infinite;
+}
+
+.information {
+  box-shadow: 5px 5px 4px #2a1e1e36;
+  border-radius: 10px;
+  margin: 40px 0;
+}

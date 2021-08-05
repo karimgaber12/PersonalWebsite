@@ -1,0 +1,290 @@
+/*Animate heroText*/
+@-webkit-keyframes text {
+  0% {
+    width: 0ch;
+  }
+  50% {
+    width: 13ch; /*Font animate heroTitle(I am Your Jop)
+                    Change the number of characters according to your job
+                    For Example (front end developer) 20ch*/
+
+    /*Warning: Consider the space as a character*/
+  }
+}
+@keyframes text {
+  0% {
+    width: 0ch;
+  }
+  50% {
+    width: 13ch; /*Font animate heroTitle(I am Your Jop)
+                    Change the number of characters according to your job
+                    For Example (front end developer) 20ch*/
+
+    /*Warning: Consider the space as a character*/
+  }
+}
+
+/*Animate MainTitle*/
+@-webkit-keyframes MainTitle {
+  0%,
+  100% {
+    -webkit-clip-path: polygon(
+      0 42%,
+      13% 48%,
+      26% 55%,
+      41% 64%,
+      56% 65%,
+      69% 58%,
+      84% 45%,
+      100% 38%,
+      100% 100%,
+      0% 100%
+    );
+            clip-path: polygon(
+      0 42%,
+      13% 48%,
+      26% 55%,
+      41% 64%,
+      56% 65%,
+      69% 58%,
+      84% 45%,
+      100% 38%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    -webkit-clip-path: polygon(
+      0 63%,
+      14% 57%,
+      25% 50%,
+      40% 42%,
+      56% 40%,
+      71% 44%,
+      84% 50%,
+      100% 60%,
+      100% 100%,
+      0% 100%
+    );
+            clip-path: polygon(
+      0 63%,
+      14% 57%,
+      25% 50%,
+      40% 42%,
+      56% 40%,
+      71% 44%,
+      84% 50%,
+      100% 60%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+@keyframes MainTitle {
+  0%,
+  100% {
+    -webkit-clip-path: polygon(
+      0 42%,
+      13% 48%,
+      26% 55%,
+      41% 64%,
+      56% 65%,
+      69% 58%,
+      84% 45%,
+      100% 38%,
+      100% 100%,
+      0% 100%
+    );
+            clip-path: polygon(
+      0 42%,
+      13% 48%,
+      26% 55%,
+      41% 64%,
+      56% 65%,
+      69% 58%,
+      84% 45%,
+      100% 38%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    -webkit-clip-path: polygon(
+      0 63%,
+      14% 57%,
+      25% 50%,
+      40% 42%,
+      56% 40%,
+      71% 44%,
+      84% 50%,
+      100% 60%,
+      100% 100%,
+      0% 100%
+    );
+            clip-path: polygon(
+      0 63%,
+      14% 57%,
+      25% 50%,
+      40% 42%,
+      56% 40%,
+      71% 44%,
+      84% 50%,
+      100% 60%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+
+/*section 3 Resume*/
+.MainTitleResume{
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+.MainTitleResume.active{
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.articleResume{
+  -webkit-transition: all ease-in-out .7s;
+  transition: all ease-in-out .7s;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+}
+.articleResume.active{
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.AsummaryResume{
+  -webkit-transition: all ease-in-out .9s;
+  transition: all ease-in-out .9s;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+.AsummaryResume.active{
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.AeducationResume{
+  -webkit-transition: all ease-in-out .9s;
+  transition: all ease-in-out .9s;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+}
+.AeducationResume.active{
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.skillsResume{
+  -webkit-transition: all ease-in-out .9s;
+  transition: all ease-in-out .9s;
+  opacity: 0;
+}
+.skillsResume.active{
+  opacity: 1;
+}
+
+/*section 4 Portfolio*/
+.MainTitlePortfolio{
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+.MainTitlePortfolio.active{
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.articlePortfolio{
+  -webkit-transition: all ease-in-out .7s;
+  transition: all ease-in-out .7s;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+}
+.articlePortfolio.active{
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.portfolioContent{
+  -webkit-transition: all ease-in-out 2s;
+  transition: all ease-in-out 2s;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+.portfolioContent.active{
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+/*Section 5 Services*/
+.MainTitleServices{
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+.MainTitleServices.active{
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.cardService1{
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  opacity: 0;
+}
+.cardService1.active{
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+.cardService2{
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+  opacity: 0;
+}
+.cardService2.active{
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.cardService3{
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  opacity: 0;
+}
+.cardService3.active{
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+/*Section 6 testimonial*/
+.MainTitletestimonial{
+  opacity: 0;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+.MainTitletestimonial.active{
+  -webkit-transition-delay: .7s;
+          transition-delay: .7s;
+  opacity: 1;
+}
