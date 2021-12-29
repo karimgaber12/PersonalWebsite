@@ -317,11 +317,11 @@ body {
   margin: 0 0 20px;
 }
 .progress {
-  height: 20px;
-  background-color: #171b3c;
+  height: 15px;
+  background-color: #2e2e2e;
   border-radius: 20px;
   border: 1px solid #000;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   overflow: visible;
   position: relative;
 }
@@ -378,7 +378,7 @@ body {
           flex-direction: column;
   position: absolute;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.253);
+  background-color: rgba(231, 135, 135, 0.253);
   padding: 20px;
   width: 100%;
   opacity: 0;
